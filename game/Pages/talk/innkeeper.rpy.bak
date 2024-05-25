@@ -1,0 +1,58 @@
+
+label innkeeper_talk:
+    call hideAllInnkeeper
+    show innkeeper_sit at innKeeperSit with myDissolve
+    if isTalking == False:
+        "[innKeeper]" "Ah~? You'd like to talk to me?"
+        "[innKeeper]" "Fufu~ Aren't you a gentleman"
+        "[innKeeper]" "Ask away~ I'd love to help you out with whatever you need~ 💜"
+    else:
+        "[innKeeper]" "Have you got any other questions~?"
+    $ isTalking = True
+    menu:
+        "Bye":
+            "[innKeeper]" "Take care~ You know where to find me~"
+            return
+        "About the inn":
+            call innkeeper_talk_inn
+        "About Musei":
+            call innkeeper_talk_innkeeper
+    
+    jump innkeeper_talk
+
+label innkeeper_talk_inn:
+    "[innKeeper]" "Oh~ My lovely little inn~"
+    "[innKeeper]" "What would you like to know about it~?"
+    menu:
+        "Back":
+            return
+        "How did you get it?":
+            "[innKeeper]" "Fufu~ What a great question~"
+            "[innKeeper]" "It's simple really~ A lot of inexperienced adventurers come along here..."
+            "[innKeeper]" "Most of them need to rest up every now and then and..."
+            hide innkeeper_sit with myDissolve
+            call hideAllInnkeeper
+            show innkeeper_mouth with myDissolve
+            "[innKeeper]" "Gosh, it just breaks my heart to see them struggling against all those slimes~"
+            "[innKeeper]" "That's why I set up this place~" 
+            hide innkeeper_sit with myDissolve
+            "[innKeeper]" "I know it's not quite a five star hotel yet, but what's important is that those poor adventurers are sage here~"
+            "[innKeeper]" "Ahaha~ Anyway~"
+            hide innkeeper_mouth with myDissolve
+            return
+        
+        "About the price":
+            "[innKeeper]" "Aha~ The price?"
+            "[innKeeper]" "Nono~ I don't need your money, really~ Just seeing you adventurers smile is more than enough compensation~"
+            "[innKeeper]" "That, and a promise to stay safe, okay~?"
+            return
+
+label innkeeper_talk_innkeeper:
+    "[innKeeper]" "Ah~? You're wondering more about me? How sweet~"
+    "[innKeeper]" "What can I say~ I'm really just a sweet old lady who loves helping adventurers~"
+    "[innKeeper]" "And I get it~ I'm a succubus and they're scary, but I really only want what's best for you adventurers, I promise~"
+    "[innKeeper]" "Ahaha~ I must bore you already~ Let's talk about something else, shall we~?"
+    return
+
+            
+    

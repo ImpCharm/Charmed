@@ -1,0 +1,157 @@
+label slimevillage_shop:
+    if getTimePeriod('night'):
+        show merchant_handboob with myDissolve
+        "[merchant]" "Ahh~ Welcome to my humble shop [pronouns.mister]~"
+        call slimevillage_shop_main from _call_slimevillage_shop_main
+        return 
+
+    else:
+        "A sign reads: \"Out for a bit. Don't miss me~ 💛\""
+        return
+
+label slimevillage_shop_main:
+    show merchant_handboob with myDissolve
+    "[merchant]" "Has anything caught your attention~? Anything other than me~? Kyahaha~"
+    menu slimevillage_shop_main_menu:
+        "Buy":
+            jump slimevillage_shop_buy
+        "Sell" if False:
+            jump slimevillage_shop_buy
+        "Talk":
+            call merchant_talk from _call_merchant_talk
+            jump slimevillage_shop_main_menu
+        "Exit":
+            "[merchant]" "Bye byeee, [pronouns.mister]~"
+            return
+
+    jump slimevillage_shop_main
+
+label slimevillage_shop_buy:
+
+    $ shopKeeperDialogue = "I'm totally the best merchant around, y'know~?"
+    $ inShopGui = True
+
+    call hideAllMerchant from _call_hideAllMerchant_6
+    call screen shopGui("merchant")
+    $ inShopGui = False
+    return
+
+label merchantPoisonBuy:
+    $ inShopGui = False
+    show merchant_handboob at slideInLeft(0.3, 0.0, 1)
+    "[merchant]" "Hmm~? A cure for poison?"
+    hide merchant_handboob with myDissolve
+    show merchant_stand with myDissolve
+    if merchantSoldPoison == True:
+        "[merchant]" "Sorry [pronouns.mister], I'm aaall out of poison cures for today~"
+        "[merchant]" "Shame right? I loved selling them~ Guess you'll just have to come back when they're back in stock~"
+        hide merchant_stand with myDissolve
+        show merchant_handboob with myDissolve
+        "[merchant]" "Can I help you with anything else in the meantime~?"
+        jump slimevillage_shop_main_menu
+
+    # show merchant_stand at merchant_zoomin(1.0, 1.5, 1) with myDissolve
+    "[merchant]" "Sure~ I'll give it to ya for 10 gold, 'kay~?"
+    menu:
+        "Buy" if player.money >= 10:
+            "[merchant]" "Kyahaha~ Pleasure doing business, [pronouns.mister]~"
+            call loseMoney(player, 10) from _call_loseMoney_2
+            call clearStatusEffect(0) from _call_clearStatusEffect
+            $ merchantSoldPoison = True
+            play audio "/audio/merchant/22w8.mp3"
+            hide merchant_stand with myDissolve
+            show merchant_lean_open with myDissolve
+            "[merchant]" "Gosh you're so sweet [pronouns.mister]~"
+            "[merchant]" "Supporting a local poor girlie like myself~ You really are a hero huh~?"
+            "[merchant]" "Hey hey~ I think it'd be fair of me to give you a little reward for your generosity~"
+            "[merchant]" "Won't you come here for just a second?"
+            menu:
+                "Okay":
+                    show merchant_lean_closed with myDissolve
+                    "[merchant]" "I knew you would~"
+                    hide merchant_lean_open
+                    hide merchant_lean_closed with myDissolve
+                    show merchant_tongue with myDissolve
+                    "[merchant]" "Come here~ This'll only take a bit~"
+                    show merchant_tongue at merchant_closekiss_kiss_3
+                    show screen lipstickMark(0.4, -0.3, 0.8, 1.5, 1.5, 0, True) onlayer kiss1
+                    play audio kisssound10
+
+                    "[merchant]" "Mwah~"
+                    "[merchant.profile.name] comes closer and gives you a quick kiss. Her saliva entering your mouth."
+                    "It tastes... Sweet, yet sour..."
+                    $ player.arousal += 50
+                    call recalculateCaps from _call_recalculateCaps_2
+                    call gainStatusEffect(0, 1) from _call_gainStatusEffect_1
+                    play audio "/audio/merchant/22w1.mp3"
+                    "[merchant]" "There~ Consider it a token of our friendship, 'kay [pronouns.mister]~?"
+                    hide merchant_tongue with myDissolve
+                    show merchant_lean_open with myDissolve
+                    "[merchant]" "I'm so glad we're such good friends, y'know~?"
+                    "[merchant]" "Thanks for your support, [pronouns.mister]~"
+                    hide merchant_lean_open with myDissolve
+                    show merchant_handboob with myDissolve
+                    "[merchant]" "Ufufu~ I gotta get back to busines now though, [pronouns.mister]~"
+                    "[merchant]" "Is there anything else you'd like to buy~?"
+                    jump slimevillage_shop_main_menu
+
+                "No thanks":
+                    "[merchant]" "My~ How rude!"
+                    "[merchant]" "Oh well, in that case, is there anything else I can help ya with~?"
+                    jump slimevillage_shop_main_menu
+        "Don't buy":
+            "[merchant]" "Eehh~? Are you sure? What if you were poisoned and you didn't even know it? That'd be pretty bad, you know~?"
+            "[merchant]" "Oh well~ You're missing out~"
+            hide merchant_stand with myDissolve
+            show merchant_handboob with myDissolve
+            "[merchant]" "Is there anything else you'd like~?"
+            jump slimevillage_shop_main_menu
+
+    jump slimevillage_shop_main
+
+label merchantPfpBuy:
+    $ inShopGui = False
+    show merchant_handboob at slideInLeft(0.3, 0.0, 1)
+    "[merchant]" "Kufufu~ You want a picture of my face~? How cute~"
+    "[merchant]" "I made these myself, y'know~? It's got that authentic homemade feel~"
+    hide merchant_handboob with myDissolve
+    show merchant_lean_open with myDissolve
+    "[merchant]" "They're also of the highest quality available~ They're limited edition too, y'know?"
+    show merchant_lean_closed with myDissolve
+    "[merchant]" "In fact, there's only 1 more left in stock~ You don't wanna miss out on such an offer, do ya~?"
+    "[merchant]" "Hmm~"
+    hide merchant_lean_open
+    hide merchant_lean_closed with myDissolve
+    show merchant_stand with myDissolve
+    "[merchant]" "Well I suppose you've been really nice to me so far~"
+    "[merchant]" "I'll cut ya an offer, okay~?"
+    "[merchant]" "Instead of 5000 gold, I'll give it to ya fooor..."
+    show merchant_stand at merchant_zoomin(1.0, 1.2, 1) with myDissolve
+    "{color=#ff0}1000{/color} gold~ Do we have a deal mister~?"
+    menu:
+        "Buy" if player.money >= 1000:
+            call loseMoney(player, 1000) from _call_loseMoney_3
+            hide merchant_stand with myDissolve
+            show merchant_handboob with myDissolve
+            "[merchant]" "Kyahaha~ You've got excellent taste, mister~"
+            "[merchant]" "Well then, here ya go~"
+            "[merchant.profile.name] reaches out and hands you a picture of her face..."
+            "..."
+            call unlockPfp(0) from _call_unlockPfp
+            "[merchant]" "Kyahaha~! Pleasure doing business, [pronouns.mister]~"
+            "[merchant]" "Can I offer you anything else~?"
+            jump slimevillage_shop_main_menu
+
+
+        "Don't buy":
+            "[merchant]" "Ehh~? Are you sure?"
+            "[merchant]" "It's totally the new trend, you know~?"
+            hide merchant_stand with myDissolve
+            show merchant_handboob with myDissolve
+            "[merchant]" "Kufufu~ But oh well, if you wanna be lame I guess I can't stop you~"
+            "[merchant]" "Can I offer you anything else~?"
+            
+            jump slimevillage_shop_main_menu
+    
+    return
+               

@@ -1,0 +1,86 @@
+label slimevillage_castle:
+
+    if(game.objective[2].completionFlags[2] == True
+        and game.objective[2].completionFlags[3] == False
+        and slimecastlemonologue == False):
+            call cutscene_slimeprincess_castle_1
+
+    if(game.objective[2].completed):
+        if(player.conditions.princessServant and slimePrincessPetTalk == False):
+            "..."
+            "...Hey~"
+            "HEY!"
+            "[slimePrincess]" "Wake up servant!"
+            scene slimevillage_castle with myDissolve
+            show slimeprincess_laugh with myDissolve
+            "[slimePrincess]" "Ohoho~ Good morning"
+            play music sussy volume 0.25
+            "[slimePrincess]" "Do you remember what happened~? You decided to quit being strong~ You became my pet instead~"
+            "[slimePrincess]" "Fufu~ You were obeying me and everything~ It was honestly adorable~"
+            hide slimeprincess_laugh with myDissolve
+            show slimeprincess_smug with myDissolve
+            "[slimePrincess]" "I hope you don't have any regrets, because you're mine now~"
+            "[slimePrincess]" "And as your princess, you're now under my control~"
+            "[slimePrincess]" "I want you to defeat as many enemies as you can~ You'll tribute 50\% of your XP by default, but I want you to come here and hand the remaining 50\% to me yourself~"
+            hide slimeprincess_smug with myDissolve
+            show slimeprincess_laugh with myDissolve
+            "[slimePrincess]" "As for your little quest~"
+            "[slimePrincess]" "I want you to go to the alraune tree~ There, you'll find a ton of nectar~ I want you to take it and give it to me~"
+            show slimeprincess_laugh at merchant_zoomin(1.0, 1.2, 1)
+            pause 0.7
+            "[slimePrincess]" "Sharing is caring after all, right?"
+            "[slimePrincess]" "I'm sure if you tell them how desperately you need it they'll understand~"
+            "[slimePrincess]" "But once you get your hands on that nectar..."
+            show slimeprincess_laugh at merchant_zoomin(1.2, 1.4, 0.7)
+            "[slimePrincess]" "It's all going..."
+            show slimeprincess_laugh at merchant_zoomin(1.4, 1.5, 0.4)
+            "[slimePrincess]" "Straight..."
+            show slimeprincess_laugh at merchant_zoomin(1.5, 1.6, 0.4)
+            "[slimePrincess]" "To..."
+            show slimeprincess_laugh at merchant_zoomin(1.6, 1.7, 0.4)
+            "[slimePrincess]" "Me~"
+            show slimeprincess_laugh at merchant_zoomin(1.7, 1.0, 0.5)
+            play audio "/audio/slimeprincess/10w5.mp3"
+            pause 0.3
+            "[slimePrincess]" "Fufu~"
+            "[slimePrincess]" "Anyway~"
+            "[slimePrincess]" "I have more important things to do than speaking to piggies such as yourself~"
+            "[slimePrincess]" "Goodbye, servant~"
+            "[slimePrincess]" "Don't forget to stop by and share some XP whenever you can~"
+            hide slimeprincess_laugh with myDissolve
+            "The slime princess laughs as she walks away towards her room..."
+            $ slimePrincessPetTalk = True
+            stop music fadeout 10
+        
+
+
+    scene slimevillage_castle with myDissolve
+    menu slimevillage_castle_menu:
+        "Talk to [slimePrincess.profile.name]":
+            if(game.objective[2].completed):
+                "[charm]" "You already cleared [slimePrincess.profile.name]'s fight but you can repeat the battle to unlock all the H-scenes here!"
+            
+            show slimeprincess_laugh with myDissolve
+            "[slimePrincess]" "Ah~ Have you made your decision~?"
+            "[slimePrincess]" "What will it be? Are  you gonna keep up that futile game of resistance~?{w=0.1} Or would you rather skip to the good part and give in to your new princess~?"
+            menu:
+                "Fight her":
+                    call enterCombat(slimePrincess)
+
+                "Submit":
+                    "[slimePrincess]" "Ufufu~ That's what I thought~ I'm just too pretty~"
+                    "[slimePrincess]" "I'm not even surprised at this point~ You humans can't resist a gorgeous slime like myself~"
+                    "[slimePrincess]" "Now come here, I'll make you my little pet~"
+                    call fight_slimeprincess_victory_submit
+                    
+                "Nevermind":
+                    "[slimePrincess]" "Aww~ I get it~ You're scared~"
+                    "[slimePrincess]" "Submitting is a whole lot easier, you know? Even if you're as weak as you are, you'll never have to beat me~"
+                    "[slimePrincess]" "Not that you'd ever be able to anyway~ Ufufu~"
+                    jump slimevillage_castle_menu
+
+
+        "Exit":
+            call move("slimevillage_royal") from _call_move_3
+
+    jump slimevillage_castle

@@ -1,0 +1,493 @@
+label succubus_town_1:
+    $ discStatus.location = "In the forest"
+    $ setDiscord()
+    "..."
+    "...Hey"
+    "Hey!"
+    show forest
+    show imp_close with myDissolve
+    "Wake up, dummy!"
+    "Ahh~ I didn't scare you did I?"
+    hide imp_close with myDissolve
+    show imp_boobhand with myDissolve
+    "There, much better~"
+    "You must be pretty confused huh?"
+    "I suppose I should introduce myself.."
+    "[imp]" "My name is Lulu and I'm a succubus~"
+    hide imp_boobhand with myDissolve
+    show imp_stand with myDissolve
+    "[imp]" "Don't worry, I won't drain you... I'm not like those other succubi who have no mercy on poor humans like you."
+    "[imp]" "I'm sure you're familiar with succubi, right? We're demons who feed on sexual energy~"
+    "[imp]" "Most of them look like normal human women. You should be careful who you trust..."
+    "[imp]" "..."
+    "[imp]" "Anyway~ you seem to be in pretty bad condition. How about I take you to the local town? "
+    "[imp]" "Here, follow me~! If we're quick we can make it before it's dark~"
+    menu:
+        "Follow":
+            jump succubus_town_2
+                        
+label succubus_town_2:
+    scene forest_dynamic
+    "..."
+    "You and Lulu start walking towards the town"
+    "After walking for a while, Lulu taps your shoulder."
+    show imp_boobhand with myDissolve
+    "[imp]" "Hey hey, [pronouns.mister]~ You're a human right?"
+    "[imp]" "I wonder what happened to you... Do you remember anything before I woke you up here just now?"
+    hide imp_boobhand with myDissolve
+    show imp_sadface with myDissolve
+    "[imp]" "Hmm, you don't? "
+    "[imp]" "That's odd... Maybe you lost your memory..?"
+    "[imp]" "I feel bad for you, [pronouns.mister]~ You must feel so confused..."
+    "[imp]" "We should get you to a safe place first. A place like this isn't safe at all for a human like you"
+    jump succubus_town_3
+
+label succubus_town_3:
+    scene forest_dynamic
+    "You continue walking to the town."
+    show imp_boobhand with myDissolve
+    "[imp]" "Say [pronouns.mister]~ Have you ever fought any battles before? "
+    "[imp]" "If you wanna survive around here you're gonna need to learn how to defend yourself..."
+    "[imp]" "There's monsters all around a forest like this! Luckily for you this forest's monsters aren't too powerful so they likely won't steal your soul."
+    "[imp]" "Some slime girls will use your semen to make themselves stronger though~! You should be careful not to have your levels drained by them!"
+    "[imp]" "When a monster restrains you they can start draining you. It's important you never let a monster get on top of you, okay~?"
+    hide imp_boobhand with myDissolve
+    show imp_happyface with myDissolve
+    "[imp]" "Hey hey~ I think I see a slime girl over there in the distance~ Why don't we practice on her a bit~?"
+    "[imp]" "Don't worry, monsters don't actually die when they're defeated~ They usually pass out and just need some time to rest."
+    menu succubus_town_3_slimeOption:
+        "Approach the slime":
+            call restoreAll from _call_restoreAll_3
+            jump succubus_town_4
+    "that was rather sussy"
+    jump succubus_town_3_slimeOption
+
+label succubus_town_4:
+    call hideAllImp from _call_hideAllImp_2
+    call hideAllSlime from _call_hideAllSlime_18
+    show slime_main with myDissolve
+    "[slime]" "You approach the slime girl!"
+    "[slime]" "Huh..? What are you doing?"
+    call restoreAll() from _call_restoreAll_4
+    show imp_boobhand at blbm_slide
+    "[imp]" "Kufufu, Perfect~ You've entered your first battle~"
+    "[imp]""Battles work in turns~ You'll get to attack first and then your opponent will~"
+    "[imp]" "..."
+    show imp_boobhand at imp_stats_1
+    $ currentEnemy = slime
+    $ inCombat = True
+    call calculateLevel(player, False) from _call_calculateLevel_5
+    call calculateLevel(slime, False) from _call_calculateLevel_6
+
+    call showBattleGui from _call_showBattleGui
+
+    "[imp]" "These little things are your stats~ They help keep track of your status during battle~!"
+    "[imp]" "Your max health, SP and attack power are determined by your level~! That's why your levels are so important!"
+    show imp_boobhand at imp_stats_2
+    "[imp]" "You can use SP to use skills. It restores a little after you use a normal attack."
+    hide imp_boobhand with myDissolve
+    show imp_stand at imp_stats_3
+    "[imp]" "Your arousal indicates how aroused you are. If your arousal hits 100 you'll have trouble resisting attacks"
+    hide imp_stand
+    show imp_flipjump
+    "[imp]" "And finally, once your health drops below 0 you pass out. Some enemies might have mercy on you but trust me, not everyone will..."
+    "[imp]" "Anyway~ I'm sure you know the rest~ If anything bad happens I'll step in~"
+    "[imp]" "Good luuuck~!"
+    hide imp_flipjump
+    show imp_happyface at imp_stats_5
+    pause 0.5
+    hide imp_happyface
+
+    call enterCombat(slime) from _call_enterCombat_3
+
+    "[slime]" "Ow... I just wanted a little XP..!"
+    $ game.slimeTutoFight = False
+    "[slime]" "You meanie... I'm outta here!"
+    show slime_main_sad at squishAway
+    "The slime slowly creeps away..."
+    "..."
+    show imp_sadface with myDissolve
+    "[imp]" "Oh my~! Are you alright [pronouns.mister]?"
+    "[imp]" "Tsk tsk~ If you wanna survive in this world you'll have to be stronger than that."
+    hide imp_sadface
+    show imp_boobhand with myDissolve
+    "[imp]" "If you can't get stronger I guarantee you'll end up a monster girls slave~"
+    "[imp]" "But..."
+    show imp_close with myDissolve
+    hide imp_boobhand
+    "[imp]" "...If you're gonna end up a slave you might as well be mine, right~?"
+    "[imp]" "..."
+    hide imp_close with myDissolve
+    show imp_boobhand
+    show imp_boobhand at jumpy
+    "[imp]" "Kyahaha~! I'm only kidding of course~"
+    "[imp]" "I'm sure you'll do just fine defending yourself~"
+    "[imp]" "Anyway, we're almost at the town~ You should be safe there"
+    "[imp]" "Don't worry about thanking me, I'm always happy to help, kufufu~"
+    hide imp_boobhand with myDissolve
+    show imp_sadface with myDissolve
+    "[imp]" "Oh, I forgot to mention, you should probably go in alone..."
+    "[imp]" "It's not that I don't wanna go in there... It's just..."
+    "[imp]" "Our kind isn't looked on too favorably by humans."
+    "[imp]" "..."
+    hide imp_sadface with myDissolve
+    show imp_boobhand with myDissolve
+    "[imp]" "Anyway~!"
+    "[imp]" "Here's a little something too, this should get you some nice equipment."
+    call gainMoney(player, 50) from _call_gainMoney_1
+    "[imp]" "I'll be in the forest if you need me~ You should probably get some rest first though~"
+    "[imp]" "See you later, [pronouns.mister]~!"
+    show imp_boobhand at goRight
+    "Lulu walks off deeper into the forest."
+    menu:
+        "Enter town":
+            call move("town_central") from _call_move_7
+
+label cutscene_succubus_forest_1:
+    show imp_wave with myDissolve
+    "[imp]" "There you are~ Good morning sleepyhead~"
+    "[imp]" "We should try and explore the forest today~ This world is full of magic as I'm sure you've noticed already"
+    hide imp_wave with myDissolve
+    show imp_boobhand with myDissolve
+    "[imp]" "I'm sure there are people who know what exactly happened to you somewhere out there..."
+    "[imp]" "By the way, you should be careful around here, okay? There's lots of slimes in this area..."
+    hide imp_boobhand with myDissolve
+    show imp_happyface with myDissolve
+    "[imp]" "Slimes aren't that dangerous by themselves... You'll do fine against a few, but try and return to town to rest every now and then okay~?"
+    "[imp]" "Great~! Let's explore the slime cave once you reach level 5 or so~ That's where all the slimes come from."
+    "[imp]" "I'll be waiting for you here if you need anything~"
+    $ game.objective[1].completionFlags[0] = True
+    call hideAllImp from _call_hideAllImp_3
+    return
+
+label cutscene_succubus_forest_2:
+    scene forest_dynamic
+    show imp_wave with myDissolve
+    "[imp]" "Hey hey~ [pronouns.mister]~!"
+    $ game.objective[1].completionFlags[1] = True
+    "[imp]" "You've been fighting well! good job~! Are you ready to head into the cave?"
+    "[imp]" "It's right over here~ I'll be here by your side, okay~?"
+    return
+
+label cutscene_succubus_cave_1:
+    scene black
+    "There's a lot of slime in the cave... This must be where all the slimes are coming from."
+    scene cave with myDissolve
+    "The walls of the cave drip with slime... The sound of droplets echo around the room."
+    show imp_stand with myDissolve
+    "[imp]" "Here we are~ Don't you worry, you should be properly geared up by now~"
+    "[imp]""Your primary goal should be to reach the slime village. The slimes there should be relatively friendly."
+    hide imp_stand with myDissolve
+    show imp_sadface with myDissolve
+    "[imp]""That doesn't mean you should be letting your guard down though, okay? Never let your guard down around these little slimes..."
+    "[imp]""Or... anyone who wants your levels really."
+    hide imp_sadface with myDissolve
+    show imp_stand with myDissolve
+    "[imp]" "Alright then~! I'll be here around the cave entrance if you need help~"
+    $ game.objective[1].completed = True
+    return
+
+label cutscene_slimeguard_cave_0:
+    $ currentEnemy = Character(
+                    9, 10, 2, 50, 200,  
+                    Profile("The slime guard", "#1e88e5", "lesserslime",
+                    "Lesser slimes are slimes fighting for the slime princess's army. They're fairly weak and don't have a strong work ethic, usually trying to slack off at every opertunity. Despite their low energy, they're very faithful towards their princess, doing almost anything just to drain some more XP to feed her. \n \n Their ways of draining are similar to most slimes. Using their body parts to pleasure humans until they cum inside their core."
+                    ),
+                    Conditions()
+                )
+    scene cave
+    show lesserslime_main at slideInLeft(0.7, 0.1, 2)
+    "While walking through the cave, you see a lesser slime standing near a door"
+    $ game.objective[2].completionFlags[0] = True
+    "[currentEnemy]" "Ah... It's a human..."
+    "[currentEnemy]" "Sorry.. I didn't think there would be any humans here today..."
+    "[currentEnemy]" "Ahem... state your business please... or leave."
+    "The slime looks really tired, it's as if she's been standing here for days now..."
+    "[currentEnemy]" "What are you here for..?"
+    menu:
+        "Need magic energy":
+            pass
+
+    "[currentEnemy]" "You need magic energy..?"
+    "[currentEnemy]" "Ah... I see..."
+    "[currentEnemy]" "..."
+    show lesserslime_main at lookAround
+    pause 1
+    "[currentEnemy]" "Hmm... You'll have to arrange a meeting with the slime queen..."
+    "[currentEnemy]" "She owns slime village's nectar storage... But.. Um..."
+    show lesserslime_main at lookBack
+    pause 0.7
+    "[currentEnemy]" "She isn't in town at the moment... So you're out of luck.. sorry...."
+    menu:
+        "Is there anyone else who can help?":
+            pass
+    "[currentEnemy]" "Someone else..?"
+    "[currentEnemy]" "You could talk to the slime princess... She's the leader of the royal slime army"
+    "[currentEnemy]" "But... she doesn't like humans very much so... I'm afraid that while the queen is gone you won't be allowed in without a good reason... sorry..."
+    "[currentEnemy]" "..."
+    "[currentEnemy]" "Sorry..."
+    show lesserslime_main at lesserslimeguardentercave2
+    pause 1
+    return
+
+label cutscene_slimefight_cave_0:
+    $ currentEnemy = Character(
+                    9, 10, 2, 50, 200,  
+                    Profile("The lesser slime", "#1e88e5", "lesserslime",
+                    "Lesser slimes are slimes fighting for the slime princess's army. They're fairly weak and don't have a strong work ethic, usually trying to slack off at every opertunity. Despite their low energy, they're very faithful towards their princess, doing almost anything just to drain some more XP to feed her. \n \n Their ways of draining are similar to most slimes. Using their body parts to pleasure humans until they cum inside their core."
+                    ),
+                    Conditions()
+                )
+    "You hear noises coming from the end of the cave..."
+    $ game.objective[2].completionFlags[1] = True
+    $ cave4welcome = True
+    "There's light blue slime on the floor... You follow the trail with your eyes and see two slimes talking in the distance..."
+    "..."
+    "{size=*1.5}{color=#1e88e5}???{/color}{/size}" "Come on~ It'll feel so good when you give in to her~"
+    "{size=*1.5}{color=#1e88e5}???{/color}{/size}" "Ask anyone~ It feels amazing to serve our superior princess~"
+    "{size=*1.5}{color=#92d3fd}???{/color}{/size}" "Hehe~ Do you really think you can convince me to join~? How cute~"
+    "{size=*1.5}{color=#92d3fd}???{/color}{/size}" "I bet she gave you some levels to fight with right~? Don't you wonder how I've seduced so many adventurers myself~?"
+    "{size=*1.5}{color=#1e88e5}???{/color}{/size}" "It doesn't matter how you seduce adventurers! Not after we make you one of us~ It gives you purpose~"
+    "..."
+    scene cave
+    show slime_main_sad at leftMirrored
+    "[slime]" "So you don't even care that she's got a tyranny? You don't care about the people she exploits?"
+    show lesserslime_main at slideInLeft(1.0, 0.3, 1)
+    "[currentEnemy]" "Sounds like someone's a little jealous~"
+    "Two slimes are arguing in the distance..."
+    pause 0.5
+    "[slime]" "[pronouns.mister] human~! It's you!"
+    "[slime.profile.name] walks up to you."
+    hide slime_main_sad
+    show slime_main_sad at walkupslimecutscene
+    show slime_main at walkupslimecutscene
+    "[slime]" "You agree with me, right~?"
+    "[slime]" "You don't like it either when people get hurt right?"
+    hide slime_main
+    show slime_main_sad at pushawayslimecutscene
+    show lesserslime_main at walkuplesserslimecutscene
+    "[currentEnemy]" "Like you never hurt anyone..."
+    "[currentEnemy]" "Don't listen to her, human. She's a traitor..."
+    show slime_main_sad at argue_leftw
+    show lesserslime_main at argue_rightl
+    "[slime]" "Ignore her, [pronouns.mister]! She can't even think for herself!"
+    show slime_main_sad at argue_leftl
+    show lesserslime_main at argue_rightw
+    "[currentEnemy]" "Shut up you! You agree with me, right human?"
+    show slime_main_sad at argue_leftw
+    show lesserslime_main at argue_rightl
+    "[slime]" "No way! [pronouns.he]'s on my side here!"
+    show slime_main_sad at argue_leftl
+    show lesserslime_main at argue_rightw
+    "You're backed into a wall... you have no choice but to side with one of them..."
+    menu:
+        "Side with the left slime":
+            call cutscene_slimefight_cave_0_left from _call_cutscene_slimefight_cave_0_left
+        "Side with the right slime":
+            call cutscene_slimefight_cave_0_right from _call_cutscene_slimefight_cave_0_right
+
+    show slime_main at argue_leftw
+    "[slime]" "As the lesser slime walks away, [slime.profile.name] smiles at you and looks around."
+    show slime_main at lookaround_slimecutscene
+    "[slime]" "Hehe~ Finally, she's gone."
+    "[slime]" "I saw what happened over there at the entrance. In case you couldn't tell, the slime princess thinks of humans as nothing but XP."
+    "[slime]" "And if there's one way to see her in person, it's to hurt her fragile ego~"
+    show slime_main at lookback_slimecutscene
+    "[slime]" "..."
+    "[slime]" "I... was kind of bluffing back there though... Hehe..."
+    "[slime]" "She may be self obsessed but... she's not actually weak."
+    "[slime]" "In fact... And I hate to admit it but... She's actually quite powerful."
+    "[slime]" "..."
+    "[slime]" "Look..."
+    "[slime]" "I know I've been hostile towards you but..."
+    "[slime]" "You're strong! And the princess has been in power for way too long..."
+    "[slime]" "And... I think if we'd work together we might stand a chance against her."
+    "[slime]" "Don't get me wrong, after she's gone I'll be draining you again~"
+    "[slime]" "..."
+    "[slime]" "But... We'd be stronger together, right?"
+    "[slime]" "You seem to need to get into slime village aaand..."
+    "[slime]" "I did just get you a meeting with the slime princess!"
+    "[slime]" "So... what do you think? Just for a while, let's work together... You and me."
+    "[slime]" "..."
+    "[slime]" "Well..."
+    "[slime]" "Regardless of what you think... We both have the same goal, right?"
+    show slime_main at lookaround_slimecutscene
+    "[slime]" "..."
+    "[slime]" "I'll be in the forest if you need me~ Think about what I said, okay~?"
+    show slime_main at slideInLeft(0.4, -0.3, 1.5)
+    "The slime creeps away. You see her heading towards a shack in the forest..."
+    pause 1
+    show imp_sadface with myDissolve
+    "[imp]" "Oh my, that sure was something..."
+    "[imp]" "I hope this ends well... The slime princess can be really impulsive sometimes, be careful around her, okay?"
+    show imp_happyface with myDissolve
+    hide imp_sadface
+    "[imp]" "But~! You did get a way into slime village, just what we needed!"
+    "[imp]" "Let's prepare to enter the village. The slime princess is very strong so try to gain a few levels before facing her~"
+    "[imp]" "You can do this~"
+    hide imp_happyface with myDissolve
+    return
+
+label cutscene_slimefight_cave_0_left:
+    hide slime_main_sad
+    show slime_main at slime_winfight
+    show lesserslime_main at argue_rightl
+    "[slime]" "I knew it~! Thanks [pronouns.mister]~!"
+    "[currentEnemy]" "It's just a human... Who cares what it thinks..."
+    "[slime]" "Aww~ Upset that little [pronouns.mister] human isn't siding with your dumb princess~?"
+    "[currentEnemy]" "She's not dumb! In fact, she's probably smarter than both of you combined..."
+    "[slime]" "Hmm~ Is she stronger than us too though~?"
+    "[slime]" "Hasn't [pronouns.mister] human been using your kind as an XP farm~?"
+    "[slime]" "Don't you think [pronouns.he]'ll just come and defeat your pathetic princess for her XP as well~?"
+    show slime_main at argue_leftl
+    show lesserslime_main at argue_rightw
+    "[currentEnemy]" "How dare you! Don't you know she's never been beaten? What makes you think [pronouns.he] can?"
+    show slime_main at argue_leftw
+    show lesserslime_main at argue_rightl
+    "[slime]" "I've seen [pronouns.him] fight~ And [pronouns.he]'s muuuch stronger than your dumb princess~"
+    show slime_main at argue_leftl
+    show lesserslime_main at argue_rightw
+    "[currentEnemy]" "You've got some real nerve, you know that?"
+    "[currentEnemy]" "..."
+    "[currentEnemy]" "Fine! I'll set up a meeting with the princess where she can prove her superiority!"
+    "[currentEnemy]" "I can't wait to wipe that grin off your face as your dumb human licks our princess's feet"
+    show slime_main at argue_leftw
+    show lesserslime_main at argue_rightl
+    "[slime]" "Hmm~ I think we all know [pronouns.mister] human's gonna make the princess [pronouns.his] little pet~"
+    show slime_main at argue_leftl
+    show lesserslime_main at argue_rightw
+    "[currentEnemy]" "How dare you!"
+    "[currentEnemy]" "Human! I'll be awaiting you in slime village's royal district!"
+    pause 0.5
+    show slime_main at slime_winfight
+    show lesserslime_main at argue_rightl
+    "[slime]" "Wonderful~ [pronouns.he]'s coming!"
+    "[slime.profile.name] looks at you and smiles"
+    "[slime]" "I can't wait to see her get defeated~"
+    "[currentEnemy]" "We'll see that soon enough. And once [pronouns.he]'s been turned into a servant, she'll tell [pronouns.him] to come rub it in your face!"
+    "[currentEnemy]" "Now if you'll excuse me, I'm running late!"
+    show lesserslime_main at slideInLeft(0.2, 1.0, 1)
+    "The lesser slime angrily walks past you, towards slime village..."
+    return
+
+label cutscene_slimefight_cave_0_right:
+    show slime_main at slime_winfight
+    show slime_main_sad at slime_winfight
+    show lesserslime_main at argue_rightl
+    "[currentEnemy]" "See dummy~? [pronouns.he] agrees with me~"
+    "[currentEnemy]" "Thanks human~! I'll put in a good word for you with the princess!"
+    "[slime]" "[pronouns.he] doesn't even know the full story..."
+    "[currentEnemy]" "Sure~ Even if [pronouns.he] met the princess [pronouns.he] still wouldn't change [pronouns.his] mind~"
+    "[currentEnemy]" "In fact, [pronouns.he]'d probably fall in love and become another servant~"
+    "[slime]" "..."
+    hide slime_main_sad with myDissolve
+    "[slime]" "...I doubt it honestly~ Hasn't [pronouns.he] beaten your kind a million times already~?"
+    "[slime]" "You're nothing but XP to [pronouns.him], you know~? The princess is no different~"
+    show slime_main at argue_leftl
+    show lesserslime_main at argue_rightw
+    "[currentEnemy]" "How dare you! Don't you know she's never been beaten?"
+    "[slime]" "Hehe~ Not yet~ I'm telling you, [pronouns.mister] human here is waaay stronger than your dumb princess, y'know~?"
+    "[currentEnemy]" "You've got some nerve, you know that?"
+    "[currentEnemy]" "How about this? I'll arrange a meeting with the princess and she can show [pronouns.him] [pronouns.his] place!"
+    "[currentEnemy]" "Then, after she's made [pronouns.him] a servant [pronouns.he]'ll come to you and come to recruit you too~"
+    pause 0.5
+    show slime_main at argue_leftw
+    show lesserslime_main at argue_rightl
+    "[slime]" "Deal~"
+    "[slime.profile.name] looks at you and smiles"
+    "[slime]" "I can't wait to see her get defeated~ So pathetic~"
+    show slime_main at argue_leftl
+    show lesserslime_main at argue_rightw
+    "[currentEnemy]" "Fine! I'll see [pronouns.him] in the castle soon enough..."
+    "[currentEnemy]" "Now if you'll excuse me, I'm running late..."
+    show lesserslime_main at slideInLeft(0.2, 1.0, 1)
+    "The lesser slime angrily walks past you, towards slime village..."
+    return
+
+label cutscene_slimeprincess_castle_1:
+
+    $ slimecastlemonologue = True
+    "You approach the castle when you hear Lulu call you."
+    show imp_boobhand with myDissolve
+    "[imp]" "Hey~ Good luck out there, okay?"
+    hide imp_boobhand with myDissolve
+    show imp_sadface with myDissolve
+    "[imp]" "I'm afraid I can't intervene if anything goes wrong in combat..."
+    "[imp]" "But... I'll try to keep you as safe as I can out here."
+    show imp_happyface with myDissolve
+    hide imp_sadface with myDissolve
+    "[imp]" "Good luck now~ You got this~"
+    scene black with myDissolve
+    "Lulu follows behind you, avoiding contact with any of the slimes..."
+    "After a while, you reach the entrance and enter."
+
+    scene slimevillage_castle with myDissolve
+    "You enter the castle when you hear a somewhat obnoxious laugh..."
+    "[anonTalk(slimePrincess.profile.color)]" "Ohohoho~! I see you've arrived, human~"
+    "You look over and see a smug looking, pink slime girl."
+    show slimeprincess_smug with myDissolve
+    "[slimePrincess]" "Welcome to my great kingdom~"
+    "[slimePrincess]" "So you're the human who challenged me huh~?"
+    hide slimeprincess_smug with myDissolve
+    show slimeprincess_laugh with myDissolve
+    "[slimePrincess]" "You really think you stand a chance? How cute~"
+    "[slimePrincess]" "You don't realise who you're talking to, do you~? I'll have you kneeling before we even start fighting~"
+    "[slimePrincess]" "Ohoho~ You should be honored I'm even making time for you here~"
+    "[slimePrincess]" "So~ I'm giving you one chance to make a good first impression. Kneel for me right now and I'll have mercy on you."
+    menu:
+        "No":
+            hide slimeprincess_laugh with myDissolve
+            show slimeprincess_smug with myDissolve
+            "[slimePrincess]" "Oh? You think you can just disobey me?"
+            "[slimePrincess]" "Ohoho~ I'll have you know that I'm the second daughter of the slime queen herself!"
+            "[slimePrincess]" "But very well~ I'll put you in your place soon enough~"
+            "[slimePrincess]" "A lady as pretty as I am shouldn't have to deal with disobedient piggies like you~"
+            "[slimePrincess]" "You'll get your chance to make it up to me soon~ What do you want for now, piggy?"
+        "Kneel":
+            "It might be smart to get on her good side..."
+            hide slimeprincess_laugh with myDissolve
+            show slimeprincess_kneel with myDissolve
+            "You start kneeling before her..."
+            "[slimePrincess]" "Ohoho~! I'm so powerful~ Even the human kneels before me~"
+            "[slimePrincess]" "Good piggy~ Now get up. you may speak~"
+    menu: 
+        "Need magic power":
+            show slimeprincess_smug at asyncDissolve(0.2)
+            hide slimeprincess_kneel with myDissolve
+            call hideAllSlimePrincess
+            show slimeprincess_laugh with myDissolve
+            "[slimePrincess]" "Oh~? You're looking for our magic power?"
+            "[slimePrincess]" "What makes you think I'd share any of it with a pathetic piggy like yourself?"    
+            "[slimePrincess]" "From what I've heard, you've been using my slimes as a source of XP, haven't you~?"    
+            hide slimeprincess_laugh with myDissolve
+            show slimeprincess_kneel with myDissolve
+            "[slimePrincess]" "Do you really think you're something? Ohohoho~ Don't make me laugh~"    
+            "[slimePrincess]" "You're just another pathetic human for me to defeat~"    
+            "[slimePrincess]" "And after I do so, I'll boast about it to all the slimes~ Ohohoho~"    
+            "[slimePrincess]" "Especially {color=[slime.profile.color]}HER{/color}. I can't wait to rub it in her face~"    
+            "[slimePrincess]" "Don't worry~ I've got a fine new life planned for you~"    
+            "[slimePrincess]" "I'll turn you into my little servant~ You'll get used to your new family soon enough~"    
+            "[slimePrincess]" "Ohoho~ I'll finally have a human as a pet~ I've always wanted one~"
+            hide slimeprincess_kneel with myDissolve
+            show slimeprincess_laugh with myDissolve  
+            "[slimePrincess]" "Very well, peasant~ I'll be waiting here~ You can say goodbye to your folk and visit me once you're ready to become mine~"
+            "[slimePrincess]" "See you soon~"
+    return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

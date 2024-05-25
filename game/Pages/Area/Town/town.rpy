@@ -1,0 +1,33 @@
+label town_intro:
+    scene black with myDissolve
+    "You walk into the town without Lulu. It feels quite lively, there's people and chatter all around and no sign of danger anywhere."
+    "It's probably best if you go get some rest for now. You don't want to be too tired to fight tomorrow..."      
+    "The inn should be a good place to get some rest, let's go there."
+    $ game.objective[0].completionFlags[0] = True;
+    return
+
+default innHighlight = ""
+label town_central:
+    if (game.objective[0].completed == False 
+        and 
+        game.objective[0].completionFlags[0] == False):
+        call town_intro from _call_town_intro
+    
+    if game.objective[0].completed == True:
+        $ innHighlight = "Inn"
+    else:
+        $ innHighlight = getHighlightText("Inn")
+
+    call areaMarker("town") from _call_areaMarker_8
+    scene town_dynamic with myDissolve
+    menu:
+        "[innHighlight]":
+            call move("town_inn") from _call_move_13
+        "Shop":
+            call move("town_shop") from _call_move_14
+        "Casino":
+            call move("town_casino") from _call_move_15
+        "Forest":
+            call move("forest_1") from _call_move_16
+
+    jump town_central

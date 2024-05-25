@@ -1,0 +1,80 @@
+label slimevillage_inn:
+    
+    if(game.slimeInnUnlocked == False):
+        call slime_inntro from _call_slime_inntro
+
+    scene slime_inn2 with myDissolve
+    menu:
+        "Rest":
+            call slimevillage_inn_rest 
+        "Talk to [innKeeper.profile.name]":
+            $ isTalking = False
+            call innkeeper_talk from _call_innkeeper_talk
+        "Slime village":
+            jump slimevillage_central
+    
+    jump slimevillage_inn
+
+label slime_inntro:
+    scene black
+    # hehehe funny uwu
+    $ game.slimeInnUnlocked = True
+    "You enter the inn when you hear a voice call out to you."
+    scene slime_inn2 with myDissolve
+    anonTalk("#d2b8d3") "Oh my~"
+    anonTalk("#d2b8d3") "It's been a while since I last saw a human~"
+    anonTalk("#d2b8d3") "My, my~ How adorable~ Have you humans always been this cute~?"
+    show innkeeper_headshot_pos with myDissolve
+    anonTalk("#d2b8d3") "Ah~ Where are my manners"
+    anonTalk("#d2b8d3") "Allow me to introduce myself~"
+    "[innKeeper]" "My name is Musei~ I'm the owner of this inn~"
+    "[innKeeper]" "You must be the new adventurer I've been hearing rumors about~ It's a pleasure to meet you, sweetheart~"
+    "[innKeeper]" "Feel free to rest here anytime you like~ I love taking care of cute inexperienced adventurers~ 💜"
+    "[innKeeper]" "Fufu~ Please make yourself at home here, okay~?"
+    return
+
+label slimevillage_inn_dead:
+    if(game.slimeInnUnlocked == False):
+        anonTalk("#d2b8d3") "Oh my~"
+        anonTalk("#d2b8d3") "A poor human~ Are you okay?"
+        scene slime_inn2 with myDissolve
+        show innkeeper_headshot_pos with myDissolve
+        anonTalk("#d2b8d3") "You really should be careful with those slimes~ Tsk tsk~"
+        anonTalk("#d2b8d3") "Ah~ Where are my manners"
+        "[innKeeper]" "My name is Musei~ I'm the owner of this inn~"
+        "[innKeeper]" "You must be the new adventurer I've been hearing rumors about~ It's a pleasure to meet you, sweetheart~"
+        "[innKeeper]" "Feel free to rest here anytime you like~ I love taking care of cute inexperienced adventurers~ 💜"
+        "[innKeeper]" "Fufu~ Please make yourself at home here, okay~?"
+        
+
+    else:
+        scene slime_inn2 with myDissolve
+        "[innKeeper]"  "Oh my~"
+        "[innKeeper]"  "Poor human~ Are you okay?"
+        show innkeeper_headshot_pos with myDissolve
+        "[innKeeper]"  "You really should be careful with those slimes~ Tsk tsk~"
+        "[innKeeper]"  "Come on~ I'll tuck you in, okay? Get some rest, darling~"
+        scene black
+        "Everything fades to black..."
+        "You feel [innKeeper.profile.name] gently tuck you in... Let's try again tomorrow..."
+        call slimevillage_inn_rest
+        jump slimevillage_inn
+        
+
+
+
+    scene slime_inn2 with myDissolve
+    jump slimevillage_inn
+    return
+
+
+label slimevillage_inn_rest:
+    scene black with myDissolve
+    call restoreAll
+    call dayPass()
+    "You go to sleep for today."
+    $ game.dayTime = time_midnight
+    $ game.dayTime = round(game.dayTime)
+    pause 3
+    call setAmbience
+    return

@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/screens.rpy", line 292: style property volume is not known.
+    activate_sound "/Sfx/decision1.mp3" volume 0.5
+                                              ^
+
+Ren'Py Version: Ren'Py 8.2.1.24030407
+Sat May 25 13:47:03 2024

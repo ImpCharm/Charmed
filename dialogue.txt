@@ -1,0 +1,81 @@
+You encounter [currentEnemy.profile.name]!
+Fight
+Fight
+Fight
+You slashed your sword at {size=+10}{color=[currentEnemy.profile.color]}[currentEnemy.profile.name]{/color}{/size}.
+You dealt {color=#f77}{size=+20}[_return]{/size}{/color} damage!
+You won!
+Huh..? A human..?
+Are we gonna fight..?
+You took [damage] damage!
+You're unable to resist any longer...
+restrain
+Suck suck suck
+Do you like it when I do this~? I bet you do, right~?
+Here, I'll take it aaall the way inside my mouth, okay~?
+Hey hey~ how does this feel~?
+Us slime girls specialize in making dicks like yours feel <i>reaaally</i> good~ ❤️
+I'll take it aaaall the way inside~ This should teach you a lesson for messing with me~!
+Don't expect me to hold back on you~ I'm gonna milk all that cum~!
+Kufufu~ Getting weak yet, mister~?
+I can tell from the way you're throbbing~ You're getting weaker aren't you~?
+I bet if I keep going like this you'll go pyu pyu in no time~
+Don't you feel good~? I'll keep going, okay~?
+You're getting close~ I want your semen mixed with my slime~!
+Hey hey~ If you stop resisting I'll make you feel extra good, you know~?
+I'm only a weak slime remember~? You can miss one turn right~?
+Suck suck suck
+Do you like it when I do this~? I bet you do, right~?
+Here, I'll take it aaall the way inside my mouth, okay~?
+Hey hey~ how does this feel~?
+Us slime girls specialize in making dicks like yours feel <i>reaaally</i> good~ ❤️
+I'll take it aaaall the way inside~ This should teach you a lesson for messing with me~!
+Don't expect me to hold back on you~ I'm gonna milk all that cum~!
+Oh... No...
+I- I don't know how much longer I can do this for...
+Ow! Stop it! At this rate I'm going to turn into sludge
+Hey~ Do you wanna touch my slime, mister~?
+Ow~! If you wanted to touch my slime you could have just said so, you know~?
+Oh... No...
+...
+...Hey
+Hey!
+Wake up, dummy!
+Ahh~ I didn't scare you did I?
+There, much better~
+You must be pretty confused huh?
+I suppose I should introduce myself..
+My name is Lulu and I'm a succubus~
+Don't worry, I won't drain you... I'm not like those other succubi who have no mercy on poor humans like you.
+I'm sure you're familiar with succubi, right? We're demons who feed on sexual energy~
+Most of them look like normal human women. You should be careful who you trust...
+...
+Anyway~ you seem to be in pretty bad condition. How about I take you to the local town? 
+Here, follow me~! If we're quick we can make it before it's dark~
+...
+You and Lulu start walking towards the town
+After walking for a while, Lulu taps your shoulder.
+Hey hey, mister~ You're a human right?
+I wonder what happened to you... Do you remember anything before I woke you up here just now?
+Hmm, you don't? 
+That's odd... Maybe you lost your memory..?
+I feel bad for you mister~ You must feel so confused...
+We should get you to a safe place first. A place like this isn't safe at all for a human like you
+You continue walking to the town.
+Say mister~ Have you ever fought any battles before? 
+If you wanna survive around here you're gonna need to learn how to defend yourself...
+There's monsters all around a forest like this! Luckily for you this forest's monsters aren't too powerful so they likely won't steal your soul.
+Some slime girls will use your semen to make themselves stronger though~! You should be careful not to have your levels drained by them!
+When a monster restrains you they can start draining you. It's important you never let a monster get on top of you, okay~?
+Hey hey~ I think I see a slime girl over there in the distance~ Why don't we practice on her a bit~?
+Don't worry, monsters don't actually die when they're defeated~ They usually pass out and just need some time to rest.
+that was rather sussy
+[character.profile.name] gained [XP] XP!
+[character.profile.name] leveled up to level [character.level]
+[character.profile.name] gained [money] gold!
+[character.profile.name] took [damage] damage.
+hello
+WOOOO
+NOOO
+sooooo that just happened...
+sooo my name is [name]
