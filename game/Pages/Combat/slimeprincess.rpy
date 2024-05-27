@@ -511,7 +511,6 @@ label fight_slimeprincess_victory:
 label fight_slimeprincess_victory_sex:
     $ slimePrincess.winCount += 1
     "[slimePrincess]" "Well then~ Thrust inside all you want~ I know how good it feels~"
-    play music rose
     "[slimePrincess]" "My slimy pussy, can you feel it engulfing your dick, peasant~?"
     "[slimePrincess]" "You know what will happen now, right~? Unlike all those other slime girls, I don't need your semen in order to drain you~"
     "[slimePrincess]" "Ohohoho~! What's wrong? Surprised~? You didn't think I was really gonna reward you did you~? Are you really that stupid~?"
@@ -530,9 +529,9 @@ label fight_slimeprincess_victory_sex:
     "Despite [slimePrincess.profile.name]'s teasing you feel as if you're about to shoot out a load of semen... Your dick twitches as you moan..."
     play audio "/audio/slimeprincess/10w4.mp3"
     "[slimePrincess]" "Are you gonna cum, peasant~? Good~ I want you to shoot every last one of your levels inside of me~"
-    call levelDrain(player, slimePrincess, (player.XP - player.levelBottom) * 2, True, False, True) from _call_levelDrain_40
     $ timeBetweenFramesSex = 0.3
     call pyupyu from _call_pyupyu_12
+    call levelDrain(player, slimePrincess, (player.XP - player.levelBottom) * 2, True, True, True) from _call_levelDrain_40
     "[slimePrincess]" "Ohohoho~! Look at you, cumming while feeding the enemy you were supposed to defeat~ How low can you get~?"
     play audio "/audio/slimeprincess/10n2.mp3"
     stop sound fadeout 3
@@ -554,14 +553,13 @@ label fight_slimeprincess_victory_sex:
 label fight_slimeprincess_victory_feet:
     $ slimePrincess.winCount += 1
     "You eagerly lick the princess's feet... they're slimy but taste surprisingly sweet, almost toxic..."
-    play music rose
     play audio "/audio/slimeprincess/10w2.mp3"
     "[slimePrincess]" "Ohoho~ How pathetic~ Who would have thought that a hero like you would be so easy train~"
     "[slimePrincess]" "Lick my feet, you weak hero~ Honestly, you don't even deserve that title~ But I suppose I can't take that from you quite yet~"
     "[slimePrincess]" "In the meantime, I'll steal some levels from you instead~"
     "[slimePrincess]" "Ohoho~ Come here, hero~ I'll let you touch my boobs as I drain you~"
     hide slimeprincess_presenting with myDissolve
-    show slimeprincess_boob at continuousBounce() with myDissolve
+    show slimeprincess_boob at continuousBounce(1.01) with myDissolve
     "Unable to control yourself, you press your hands into [slimePrincess.profile.name]'s boobs..."
     "You feel a force pulling you deeper in as you feel your levels leaving your body."
     call levelDrain(player, slimePrincess, (player.XP - player.levelBottom) + 5, True, False, True) from _call_levelDrain_41
@@ -581,9 +579,9 @@ label fight_slimeprincess_victory_feet:
     show slimeprincess_sex2 at continuousBounce() with myDissolve
     "[slimePrincess.profile.name] gets on top of you as you prepare to cum."
     "[slimePrincess]" "Are you about to spurt, [pronouns.mister]~? Are you ready to give up and spurt your soul inside me~?"    
-    call levelDrain(player, slimePrincess, (player.XP - player.levelBottom) + 5, True, False, True) from _call_levelDrain_45
     call pyupyu from _call_pyupyu_13
     show slimeprincess_sex2 at continuousBounce(1.1, 2) with myDissolve
+    call levelDrain(player, slimePrincess, (player.XP - player.levelBottom) + 5, True, True, True) from _call_levelDrain_45
     stop sound fadeout 2
     "[slimePrincess]" "Ohohoho~ How cute~ The maso-hero spurted all it's semen out for my royal slime pussy~"
     "[slimePrincess]" "You truly are a pathetic maso-hero~"
@@ -595,7 +593,7 @@ label fight_slimeprincess_victory_feet:
     "You feel tired and begin to pass out."
     "[slimePrincess]" "Oh~? You're passing out?"
     "[slimePrincess]" "Ohoho~ I'll get my guards to pick you up and bring you to the village~ Remember to bring me even more XP next time~ Ohoho~"
-    scene black at asyncDissolve2(0.0, 1.0, 5)
+    scene black with myDissolve
     "Everything starts fading to black... You feel yourself being lifted by slimy hands and walked to the village..."
     jump player_dead_slimevillage
 

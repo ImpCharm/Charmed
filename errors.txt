@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 292: style property volume is not known.
-    activate_sound "/Sfx/decision1.mp3" volume 0.5
-                                              ^
+File "renpy/common/00sync.rpy", line 617: the color keyword argument was not given a value.
+    color
+         ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Sat May 25 13:47:03 2024
+Sun May 26 21:49:15 2024

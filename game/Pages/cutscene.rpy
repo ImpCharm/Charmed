@@ -176,7 +176,9 @@ label cutscene_succubus_cave_1:
     "The walls of the cave drip with slime... The sound of droplets echo around the room."
     show imp_stand with myDissolve
     "[imp]" "Here we are~ Don't you worry, you should be properly geared up by now~"
-    "[imp]""Your primary goal should be to reach the slime village. The slimes there should be relatively friendly."
+    "[imp]" "Let's try to ask around for help, okay? Our primary goal should be to acquire as much magic energy as possible so we can try and restore your memory... and maybe even send you back to wherever you came from!"
+    "[imp]" "The slimes in slime village are pretty friendly~! You should ask for help there!"
+    # "[imp]" "Your primary goal should be to reach the slime village. The slimes there should be relatively friendly."
     hide imp_stand with myDissolve
     show imp_sadface with myDissolve
     "[imp]""That doesn't mean you should be letting your guard down though, okay? Never let your guard down around these little slimes..."

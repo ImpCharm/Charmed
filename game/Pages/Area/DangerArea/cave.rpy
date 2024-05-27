@@ -42,9 +42,7 @@ label cave_2:
     show lesserslime_main at lesserslimeguardcave2 with myDissolve
 
 
-    if (game.objective[2].completionFlags[0] == True 
-        and game.objective[2].completionFlags[1] == True   
-        and game.objective[2].completionFlags[2] == False):
+    if (game.objective[2].completed == False):
         $ highlight = getHighlightText("Slime village")
     else:
         $ highlight = "Slime village"

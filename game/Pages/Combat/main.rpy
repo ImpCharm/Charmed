@@ -17,43 +17,43 @@ label sexAttack(attacker, defender, type):
     if(type == sexTypes.feet):
         call damageCalculation(attacker.attack * multiplier) from _call_damageCalculation
         $ damage = _return
-        $ defender.arousal += (damage + defender.weaknesses.feet) * arousalMultiplier
+        $ defender.arousal += (defender.weaknesses.feet) * arousalMultiplier
         $ defender.weaknesses.feet += 1
 
     elif(type == sexTypes.blowjob):
         call damageCalculation(attacker.attack * multiplier) from _call_damageCalculation_1
         $ damage = _return 
-        $ defender.arousal += (damage + defender.weaknesses.blowjob) * arousalMultiplier
+        $ defender.arousal += (defender.weaknesses.blowjob) * arousalMultiplier
         $ defender.weaknesses.blowjob += 1
 
     elif(type == sexTypes.kiss):
         call damageCalculation(attacker.attack * multiplier) from _call_damageCalculation_2
         $ damage = _return 
-        $ defender.arousal += (damage + defender.weaknesses.kiss) * arousalMultiplier
+        $ defender.arousal += (defender.weaknesses.kiss) * arousalMultiplier
         $ defender.weaknesses.kiss += 1
 
     elif(type == sexTypes.sex):
         call damageCalculation(attacker.attack * multiplier) from _call_damageCalculation_3
         $ damage = _return 
-        $ defender.arousal += (damage + defender.weaknesses.sex) * arousalMultiplier
+        $ defender.arousal += (defender.weaknesses.sex) * arousalMultiplier
         $ defender.weaknesses.sex += 1
 
     elif(type == sexTypes.paizuri):
         call damageCalculation(attacker.attack * multiplier) from _call_damageCalculation_4
         $ damage = _return 
-        $ defender.arousal += (damage + defender.weaknesses.paizuri) * arousalMultiplier
+        $ defender.arousal += (defender.weaknesses.paizuri) * arousalMultiplier
         $ defender.weaknesses.paizuri += 1
 
     elif(type == sexTypes.armpits):
         call damageCalculation(attacker.attack * multiplier) from _call_damageCalculation_5
         $ damage = _return 
-        $ defender.arousal += (damage + defender.weaknesses.armpits) * arousalMultiplier
+        $ defender.arousal += (defender.weaknesses.armpits) * arousalMultiplier
         $ defender.weaknesses.armpits += 1
 
     elif(type == sexTypes.butt):
         call damageCalculation(attacker.attack * multiplier) from _call_damageCalculation_6
         $ damage = _return 
-        $ defender.arousal += (damage + defender.weaknesses.butt) * arousalMultiplier
+        $ defender.arousal += (defender.weaknesses.butt) * arousalMultiplier
         $ defender.weaknesses.butt += 1
 
     call updateArousal(defender) from _call_updateArousal

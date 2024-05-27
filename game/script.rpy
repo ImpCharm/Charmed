@@ -86,6 +86,7 @@ init python:
             Objective("Enter the inn to look for a place to rest"),
             Objective("Explore the forest and enter the cave"),
             Objective("Enter slime village and talk to the slime princess for help"),
+            Objective("Wait for the next update and follow @ImpCharm on twitter~!"),
             Objective("Go to the alraune tree to collect magic energy"),
             ]
 

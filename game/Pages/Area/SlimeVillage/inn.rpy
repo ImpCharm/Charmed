@@ -35,6 +35,7 @@ label slime_inntro:
 
 label slimevillage_inn_dead:
     if(game.slimeInnUnlocked == False):
+        $ game.slimeInnUnlocked = True
         anonTalk("#d2b8d3") "Oh my~"
         anonTalk("#d2b8d3") "A poor human~ Are you okay?"
         scene slime_inn2 with myDissolve

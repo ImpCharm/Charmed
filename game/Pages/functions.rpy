@@ -81,8 +81,6 @@ init python:
 
     def setShopTouchyText(place="town"):
 
-        uselessVar = "wowie KAzowie"
-
         if place == "town":
             shopKeeperDialogue = "Thank you for your purchase!"
         elif place == "merchant":
@@ -255,6 +253,8 @@ label areaMarker(location=currentArea):
         $ discStatus.location = "In slime village"
     elif location == "town":
         $ discStatus.location = "In town"
+    elif location == "":
+        $ discStatus.location = "Wandering around"
     else:
         $ discStatus.location = "In the " + location
     

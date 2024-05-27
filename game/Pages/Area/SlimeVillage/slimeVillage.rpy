@@ -3,8 +3,7 @@ label slimevillage_central:
     call areaMarker("slime village") from _call_areaMarker_7
 
 
-    if (game.objective[2].completionFlags[2] == True 
-        and game.objective[2].completionFlags[3] == False):
+    if (game.objective[2].completed == False):
         $ highlight = getHighlightText("Royal district")
     else:
         $ highlight = "Royal district"

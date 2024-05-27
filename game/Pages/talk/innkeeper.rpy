@@ -12,7 +12,6 @@ label innkeeper_talk:
         else:
             "[innKeeper]" "Fufu~ Aren't you a sweetheart~"
         
-        "[innKeeper]" "Fufu~ Aren't you a gentleman"
         "[innKeeper]" "Ask away~ I'd love to help you out with whatever you need~ 💜"
     else:
         "[innKeeper]" "Have you got any other questions~?"
