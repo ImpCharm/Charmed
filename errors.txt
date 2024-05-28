@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "renpy/common/00sync.rpy", line 617: the color keyword argument was not given a value.
-    color
-         ^
+The label _call_hideAllChara_1 is defined twice, at File "game/Pages/talk/slime.rpy", line 3:
+    call hideAllChara from _call_hideAllChara_1
+and File "game/Pages/talk/slime.rpy", line 47:
+    call hideAllChara from _call_hideAllChara_1
+
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Sun May 26 21:49:15 2024
+Tue May 28 12:29:18 2024

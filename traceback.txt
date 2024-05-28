@@ -1,36 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 410, in script
-    "[anonTalk("#fff")]" "If you're playing this game via the .exe file, and you have discord open on your computer, your status will show that you're playing this game. You can disable this by playing the browser version, or by going to Discord -> user settings -> registered games -> charmed -> X"
-Exception: String '[anonTalk(' ends with an open format operation.
+After initialization, but before game start.
+  File "game/renpy-discord-presence/rich_presence.rpy", line 175, in rollback_check
+    if no_rollback.properties != rollback_properties:
+NameError: name 'rollback_properties' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 410, in script
-    "[anonTalk("#fff")]" "If you're playing this game via the .exe file, and you have discord open on your computer, your status will show that you're playing this game. You can disable this by playing the browser version, or by going to Discord -> user settings -> registered games -> charmed -> X"
-  File "C:\RENPY\renpy-8.2.1-sdk\renpy\ast.py", line 2557, in execute
-    Say.execute(self)
-  File "C:\RENPY\renpy-8.2.1-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\RENPY\renpy-8.2.1-sdk\renpy\exports.py", line 1493, in say
-    who(what, *args, **kwargs)
-  File "C:\RENPY\renpy-8.2.1-sdk\renpy\character.py", line 1379, in __call__
-    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
-  File "C:\RENPY\renpy-8.2.1-sdk\renpy\character.py", line 1293, in prefix_suffix
-    return (sub(prefix) + sub(body) + sub(suffix))
-  File "C:\RENPY\renpy-8.2.1-sdk\renpy\character.py", line 1273, in sub
-    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
-  File "C:\RENPY\renpy-8.2.1-sdk\renpy\substitutions.py", line 368, in substitute
-    s = interpolate(s, kwargs) # type: ignore
-  File "C:\RENPY\renpy-8.2.1-sdk\renpy\substitutions.py", line 49, in interpolate
-    for lit, expr, conv, fmt in parse(s):
-  File "C:\RENPY\renpy-8.2.1-sdk\renpy\substitutions.py", line 249, in parse
-    raise Exception('String {!r} ends with an open format operation.'.format(s))
-Exception: String '[anonTalk(' ends with an open format operation.
+  File "C:\RENPY\renpy-8.2.1-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\RENPY\renpy-8.2.1-sdk\renpy\main.py", line 549, in main
+    renpy.game.script.report_duplicate_labels()
+  File "C:\RENPY\renpy-8.2.1-sdk\renpy\script.py", line 1155, in report_duplicate_labels
+    if renpy.parser.report_parse_errors():
+  File "C:\RENPY\renpy-8.2.1-sdk\renpy\parser.py", line 1785, in report_parse_errors
+    renpy.display.error.report_parse_errors(full_text, error_fn)
+  File "C:\RENPY\renpy-8.2.1-sdk\renpy\display\error.py", line 195, in report_parse_errors
+    renpy.game.invoke_in_new_context(
+  File "C:\RENPY\renpy-8.2.1-sdk\renpy\game.py", line 293, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "C:\RENPY\renpy-8.2.1-sdk\renpy\display\error.py", line 48, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "C:\RENPY\renpy-8.2.1-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\RENPY\renpy-8.2.1-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\RENPY\renpy-8.2.1-sdk\renpy\display\core.py", line 2426, in interact_core
+    i()
+  File "game/renpy-discord-presence/rich_presence.rpy", line 175, in rollback_check
+    if no_rollback.properties != rollback_properties:
+NameError: name 'rollback_properties' is not defined
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.1.24030407
 Charmed 1.0
-Sat May 25 13:40:19 2024
+Tue May 28 12:29:19 2024

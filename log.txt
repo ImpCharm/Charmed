@@ -1,22 +1,84 @@
-2024-05-26 19:54:00 UTC
+2024-05-28 10:30:15 UTC
 Windows-10-10.0.22631
 Ren'Py 8.2.1.24030407
 
-Early init took 0.08s
+Early init took 0.09s
 Loading error handling took 0.03s
-Loading script took 0.47s
+Loading script took 0.25s
+Loading save slot metadata took 0.08s
+Loading persistent took 0.00s
+
+Attempting to connect to Discord Rich Presence...
+
+Successfully connected.
+ - Init at game/renpy-discord-presence/rich_presence.rpy:20 took 0.26348 s.
+Running init code took 0.48s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kip\\AppData\\Roaming/RenPy/backups\\charmed-git':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.26s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.04s
+Running _start took 0.00s
+
+Discord Presence Set:
+details:      Main menu.
+large_image:  charmedicon
+start:        start_time
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 527.99'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+
+Discord Presence has been loaded from a save file:
+state:        In the forest | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Closing DRP connection.
+
+Successfully closed.
+Resetting cache.
+Early init took 61.12s
+Loading error handling took 0.04s
+Loading script took 0.23s
 Loading save slot metadata took 0.07s
 Loading persistent took 0.00s
 
 Attempting to connect to Discord Rich Presence...
 
 Successfully connected.
- - Init at game/renpy-discord-presence/rich_presence.rpy:20 took 0.25745 s.
-Running init code took 0.49s
+Running init code took 0.38s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.01s
 Reloading save slot metadata took 0.05s
 Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kip\\AppData\\Roaming/RenPy/backups\\charmed-git':
 Dump and make backups took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
@@ -24,17 +86,621 @@ Initial gc took 0.08s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.25s
+Creating interface object took 0.22s
 Cleaning stores took 0.00s
 Init translation took 0.06s
 Build styles took 0.00s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.08s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.09s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+
+Discord Presence Set:
+details:      Main menu.
+large_image:  charmedicon
+start:        start_time
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 527.99'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+
+Discord Presence has been loaded from a save file:
+state:        In the forest | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:      Fighting The lesser slime.
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:      Fighting The lesser slime.
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:      Fighting The lesser slime.
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:      Fighting The lesser slime.
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:      Fighting The lesser slime.
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the forest | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In town | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In town | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In town | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the casino | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the casino | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
 
 Closing DRP connection.
 
 Successfully closed.
+Resetting cache.
+Early init took 272.54s
+Loading error handling took 0.02s
+Loading script took 0.29s
+Loading save slot metadata took 0.07s
+Loading persistent took 0.00s
+
+Attempting to connect to Discord Rich Presence...
+
+Successfully connected.
+ - Init at game/renpy-discord-presence/rich_presence.rpy:20 took 0.29516 s.
+Running init code took 0.48s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kip\\AppData\\Roaming/RenPy/backups\\charmed-git':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+
+Discord Presence Set:
+details:      Main menu.
+large_image:  charmedicon
+start:        start_time
+Interface start took 0.11s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 527.99'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+
+Closing DRP connection.
+
+Successfully closed.
+Resetting cache.
+Early init took 274.43s
+Loading error handling took 0.02s
+Loading script took 0.37s
+Loading save slot metadata took 0.07s
+Loading persistent took 0.00s
+
+Attempting to connect to Discord Rich Presence...
+
+Successfully connected.
+ - Init at game/renpy-discord-presence/rich_presence.rpy:20 took 0.26487 s.
+Running init code took 0.45s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kip\\AppData\\Roaming/RenPy/backups\\charmed-git':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.24s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+
+Discord Presence Set:
+details:      Main menu.
+large_image:  charmedicon
+start:        start_time
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 527.99'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+
+Discord Presence has been loaded from a save file:
+state:        In the casino | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Closing DRP connection.
+
+Successfully closed.
+Resetting cache.
+Early init took 282.24s
+Loading error handling took 0.02s
+Loading script took 0.29s
+Loading save slot metadata took 0.08s
+Loading persistent took 0.00s
+
+Attempting to connect to Discord Rich Presence...
+
+Successfully connected.
+ - Init at game/renpy-discord-presence/rich_presence.rpy:20 took 20.81140 s.
+Running init code took 21.09s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.07s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kip\\AppData\\Roaming/RenPy/backups\\charmed-git':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.14s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.27s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+
+Discord Presence Set:
+details:      Main menu.
+large_image:  charmedicon
+start:        start_time
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 527.99'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+
+Closing DRP connection.
+
+Successfully closed.
+Resetting cache.
+Early init took 304.92s
+Loading error handling took 0.02s
+Loading script took 0.33s
+Loading save slot metadata took 0.07s
+Loading persistent took 0.00s
+
+Attempting to connect to Discord Rich Presence...
+
+Successfully connected.
+ - Init at game/renpy-discord-presence/rich_presence.rpy:20 took 27.81819 s.
+Running init code took 28.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kip\\AppData\\Roaming/RenPy/backups\\charmed-git':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.25s
+Cleaning stores took 0.00s
+Init translation took 0.09s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+
+Discord Presence Set:
+details:      Main menu.
+large_image:  charmedicon
+start:        start_time
+Interface start took 0.11s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 527.99'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+
+Discord Presence has been loaded from a save file:
+state:        In the casino | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Closing DRP connection.
+
+Successfully closed.
+Resetting cache.
+Early init took 349.10s
+Loading error handling took 0.02s
+Loading script took 0.27s
+Loading save slot metadata took 0.07s
+Loading persistent took 0.00s
+
+Attempting to connect to Discord Rich Presence...
+
+Successfully connected.
+ - Init at game/renpy-discord-presence/rich_presence.rpy:20 took 13.67720 s.
+Running init code took 13.86s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kip\\AppData\\Roaming/RenPy/backups\\charmed-git':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.11s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.26s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+
+Discord Presence Set:
+details:      Main menu.
+large_image:  charmedicon
+start:        start_time
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 527.99'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+
+Discord Presence has been loaded from a save file:
+state:        In the casino | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the casino | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Closing DRP connection.
+
+Successfully closed.
+Resetting cache.
+Early init took 393.87s
+Loading error handling took 0.03s
+Loading script took 0.30s
+Loading save slot metadata took 0.08s
+Loading persistent took 0.00s
+
+Attempting to connect to Discord Rich Presence...
+
+Successfully connected.
+ - Init at game/renpy-discord-presence/rich_presence.rpy:20 took 0.27885 s.
+Running init code took 0.48s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kip\\AppData\\Roaming/RenPy/backups\\charmed-git':
+Dump and make backups took 0.06s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.24s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.09s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+
+Discord Presence Set:
+details:      Main menu.
+large_image:  charmedicon
+start:        start_time
+Interface start took 0.11s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 527.99'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+
+Discord Presence has been loaded from a save file:
+state:        In the casino | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Closing DRP connection.
+
+Successfully closed.
+Resetting cache.
+Early init took 398.72s
+Loading error handling took 0.02s
+Loading script took 0.28s
+Loading save slot metadata took 0.08s
+Loading persistent took 0.00s
+
+Attempting to connect to Discord Rich Presence...
+
+Successfully connected.
+ - Init at game/renpy-discord-presence/rich_presence.rpy:20 took 24.04718 s.
+Running init code took 24.24s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Kip\\AppData\\Roaming/RenPy/backups\\charmed-git':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.23s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+
+Discord Presence Set:
+details:      Main menu.
+large_image:  charmedicon
+start:        start_time
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 527.99'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
+Maximum texture size: 4096x4096
+
+Discord Presence has been loaded from a save file:
+state:        In the casino | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the casino | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the casino | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the casino | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time
+
+Discord Presence Set:
+state:        In the casino | Level: 361
+details:        
+large_image:  charmedicon
+start:        start_time

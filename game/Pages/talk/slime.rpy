@@ -32,6 +32,7 @@ label slime_talk:
     $ isTalking = True
     menu slime_talk_mainMenu:
         "About Skye":
+            "[slime]" "Me~? Hehe what do you wanna know?"
             call slime_talk_slime from _call_slime_talk_slime
         "About the slime princess":
             call slime_talk_slimeprincess from _call_slime_talk_slimeprincess
@@ -42,7 +43,8 @@ label slime_talk:
     jump slime_talk
 
 label slime_talk_slime:
-    "[slime]" "Me~? Hehe what do you wanna know?"
+    call hideAllChara
+    show slime_main with myDissolve
     menu slime_talk_slime_menu:
         "About family":
             "[slime]" "Hmm... I suppose I've known you for a while now..."
@@ -127,7 +129,7 @@ label slime_talk_slime:
         "Back":
             call slime_talk_mainMenu from _call_slime_talk_mainMenu
     
-    jump slime_talk_slime_menu
+    jump slime_talk_slime
 
 label slime_talk_slimeprincess:
     if player.conditions.princessServant:

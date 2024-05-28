@@ -1,4 +1,5 @@
 label town_casino:
+    stop music fadeout 5
     call areaMarker("casino") from _call_areaMarker_9
     scene casino with myDissolve
     if(game.casinoUnlocked == False):
@@ -622,6 +623,7 @@ label town_casino_roulette_refuse:
     return
 
 label town_casino_roulette_refuse_loss:
+    $ casinoOwed = casinoBetAmount  
     hide casinogirlred_kneel with myDissolve
     hide casinogirlred_contact with myDissolve
     call hideAllChara from _call_hideAllChara_5
